@@ -1,0 +1,18 @@
+Authentication & Authorization
+----------------------------------
+
+nodejs -> express;
+middleware -> 
+
+password -> dslfkjhg9eorngdjkfng
+
+encrypt, decrypt -> hashing
+
+bcrypt -> 
+
+----------------------------------
+
+hello -> salt
+      -> saltRounds
+
+    
