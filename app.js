@@ -6,6 +6,8 @@ const session = require("express-session");
 const app = express();
 app.use(session({
     secret: "sdkjhfiuwreflksdnlf",
+    resave: false,
+    saveUninitialized: false,
     cookie: {
         maxAge: 1000 * 60 // 1 min
     }
@@ -19,7 +21,38 @@ app.listen(8080, () => {
     console.log("✅ Server: http://localhost:8080");
 })
 
-// cookie -> client side storage
-// session -> server side storage
+// // cookie -> client side storage
+// // session -> server side storage
 
-// express-session
+// // express-session
+
+// crypto, otp-generator
+
+// const getOTP = (len = 6) => {
+//     const string = "0123456789abcdef"
+//     let k = 0;
+//     let otp = "";
+//     while (k < len) {
+//         const randomIndex = Math.floor(Math.random() * string.length);
+//         const randomChar = string[randomIndex];
+//         otp += randomChar;
+//         k++;
+//     }
+//     console.log(otp)
+// }
+
+// getOTP(4);
+
+// // crypto
+// const crypto = require("crypto");
+// const otp = crypto.randomInt(1000, 9999);
+// console.log(otp)
+
+// // otp-generator
+// const otpGenerator = require("otp-generator");
+// const generated_otp = otpGenerator.generate(6, {
+//     lowerCaseAlphabets: false,
+//     upperCaseAlphabets: false,
+//     specialChars: false,
+// });
+// console.log(generated_otp)

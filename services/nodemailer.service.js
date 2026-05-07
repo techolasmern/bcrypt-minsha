@@ -1,15 +1,18 @@
+const env = require("../config/env.config");
 const transporter = require("../config/nodemailer.config");
 
 const mailingOptions = {
-    from: "mail@gmail.com",
+    from: env.GMAIL_USER,
     subject: "Hello World",
     text: "Hello World!"
 }
 
-const sendEmail = (to) => {
-    mailingOptions.to = to;
-    const res = transporter.sendMail(mailingOptions);
-    return res;
+const sendEmailOtp = async (to) => {
+    try {
+        
+    } catch (err) {
+        return null;
+    }
 }
 
 module.exports = sendEmail;
