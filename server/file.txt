@@ -1,0 +1,15 @@
+JWT - JSON WEB TOKEN.
+
+Authentication & Authorization
+
+Authentication -> login, check user is valid. who?
+Authorization -> validate access.
+
+header.payload.signature
+
+npm i jsonwebtoken;
+
+methods
+sign -> for creating token
+verify -> for verifying token
+

@@ -3,6 +3,7 @@ const apiRouter = require("./routes/api.router");
 const authRouter = require("./routes/auth.router");
 const session = require("express-session");
 const otpRouter = require("./routes/otp.router");
+const jwtRouter = require("./routes/jwt.router");
 const cors = require("cors");
 
 const app = express();
@@ -24,6 +25,7 @@ app.use(session({
 app.use("/api", apiRouter);
 app.use("/auth", authRouter);
 app.use("/otp", otpRouter);
+app.use("/jwt", jwtRouter);
 
 app.listen(8080, () => {
     console.log("✅ Server: http://localhost:8080");
